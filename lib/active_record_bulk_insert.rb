@@ -70,7 +70,7 @@ ActiveRecord::Base.class_eval do
     end
   end
 
-  def mark_as_read
+  def mark_as_saved
     @new_record = false
     changes_applied
   end
