@@ -69,4 +69,9 @@ ActiveRecord::Base.class_eval do
       false
     end
   end
+
+  def mark_as_read
+    @new_record = false
+    changes_applied
+  end
 end
