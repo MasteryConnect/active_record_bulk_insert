@@ -48,7 +48,7 @@ ActiveRecord::Base.class_eval do
   end
   def self._generate_values_sql(attrs, options)
     attrs.map do |record|
-      "(#{_resolve_record(record, options).values.map { |r| sanitize(r) }.join(', ')})"
+      "(#{_resolve_record(record, options).values.map { |r| sanitize_sql(r) }.join(', ')})"
     end.join(",")
   end
 
